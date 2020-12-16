@@ -5,7 +5,7 @@
 }
 
 body {
-  background: #224941 url(./img/forest.jpg) no-repeat center center/cover;
+  background: #224941 url(./img/underwater.jpg) no-repeat center center/cover;
   color: white;
   font-family: "Montserrat", sans-serif;
   min-height: 100vh;
@@ -18,7 +18,7 @@ body {
 
 body::after {
   content: "";
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.5);
   z-index: -1;
   position: absolute;
   top: 0;
@@ -63,4 +63,33 @@ body::after {
   border-radius: 50%;
   position: absolute;
   z-index: -2;
+  top: -10px;
+  left: -10px;
+}
+
+.pointer {
+  background-color: white;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  display: block;
+}
+
+.pointer-container {
+  position: absolute;
+  top: -40px;
+  left: 140px;
+  width: 20px;
+  height: 190px;
+  animation: rotate 7.5s linear forwards infinite;
+  transform-origin: bottom center;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
